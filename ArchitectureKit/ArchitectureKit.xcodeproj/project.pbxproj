@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF037EB82CCCF7DD00EE0F1F /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EB72CCCF7DD00EE0F1F /* DataLayer */; };
+		AF037EBA2CCCF7DD00EE0F1F /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EB92CCCF7DD00EE0F1F /* DomainLayer */; };
+		AF037EBC2CCCF7DD00EE0F1F /* PresentationLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */; };
 		AF7753562CCCEB50001E8BF5 /* ArchitectureKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */; };
 		AF7753582CCCEB50001E8BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753572CCCEB50001E8BF5 /* ContentView.swift */; };
 		AF77535A2CCCEB53001E8BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7753592CCCEB53001E8BF5 /* Assets.xcassets */; };
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF037EB52CCCF66700EE0F1F /* Layers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Layers; sourceTree = "<group>"; };
 		AF7753522CCCEB50001E8BF5 /* ArchitectureKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureKitApp.swift; sourceTree = "<group>"; };
 		AF7753572CCCEB50001E8BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF037EBA2CCCF7DD00EE0F1F /* DomainLayer in Frameworks */,
+				AF037EBC2CCCF7DD00EE0F1F /* PresentationLayer in Frameworks */,
+				AF037EB82CCCF7DD00EE0F1F /* DataLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,13 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF037EB42CCCF64A00EE0F1F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AF037EB52CCCF66700EE0F1F /* Layers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AF037EB62CCCF7DD00EE0F1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF7753492CCCEB50001E8BF5 = {
 			isa = PBXGroup;
 			children = (
 				AF7753542CCCEB50001E8BF5 /* ArchitectureKit */,
 				AF7753652CCCEB53001E8BF5 /* ArchitectureKitTests */,
 				AF77536F2CCCEB53001E8BF5 /* ArchitectureKitUITests */,
+				AF037EB42CCCF64A00EE0F1F /* Modules */,
 				AF7753532CCCEB50001E8BF5 /* Products */,
+				AF037EB62CCCF7DD00EE0F1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +167,11 @@
 			dependencies = (
 			);
 			name = ArchitectureKit;
+			packageProductDependencies = (
+				AF037EB72CCCF7DD00EE0F1F /* DataLayer */,
+				AF037EB92CCCF7DD00EE0F1F /* DomainLayer */,
+				AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */,
+			);
 			productName = ArchitectureKit;
 			productReference = AF7753522CCCEB50001E8BF5 /* ArchitectureKit.app */;
 			productType = "com.apple.product-type.application";
@@ -430,6 +459,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +619,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF037EB72CCCF7DD00EE0F1F /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLayer;
+		};
+		AF037EB92CCCF7DD00EE0F1F /* DomainLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainLayer;
+		};
+		AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF77534A2CCCEB50001E8BF5 /* Project object */;
 }
