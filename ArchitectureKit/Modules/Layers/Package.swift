@@ -21,33 +21,42 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Swinject/Swinject.git", from: "2.9.1")
+        .package(url: "https://github.com/Swinject/Swinject.git", exact: "2.9.1"),
+        .package(url: "https://github.com/benjaminbruch/Rick-and-Morty-Swift-API.git", exact: "3.0.0"),
     ],
     targets: [
-        // MARK: - Presentation
+        // MARK: - Targets
         .target(
             name: "PresentationLayer",
-            dependencies: ["Swinject"]
+            dependencies: [
+                .byName(name: "DomainLayer"),
+                .product(name: "Swinject", package: "Swinject")
+            ]
         ),
+        .target(
+            name: "DomainLayer",
+            dependencies: [
+                .product(name: "Swinject", package: "Swinject")
+            ]
+        ),
+        .target(
+            name: "DataLayer",
+            dependencies: [
+                .byName(name: "DomainLayer"),
+                .product(name: "Swinject", package: "Swinject"),
+                .product(name: "RickMortySwiftApi", package: "Rick-and-Morty-Swift-API"),
+            ]
+        ),
+        
+        
+        // MARK: - Testing
         .testTarget(
             name: "PresentationLayerTests",
             dependencies: ["PresentationLayer"]
         ),
-        
-        // MARK: - Domain
-        .target(
-            name: "DomainLayer",
-            dependencies: ["Swinject"]
-        ),
         .testTarget(
             name: "DomainLayerTests",
             dependencies: ["DomainLayer"]
-        ),
-        
-        // MARK: - Data
-        .target(
-            name: "DataLayer",
-            dependencies: ["Swinject"]
         ),
         .testTarget(
             name: "DataLayerTests",

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF037EB82CCCF7DD00EE0F1F /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EB72CCCF7DD00EE0F1F /* DataLayer */; };
-		AF037EBA2CCCF7DD00EE0F1F /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EB92CCCF7DD00EE0F1F /* DomainLayer */; };
-		AF037EBC2CCCF7DD00EE0F1F /* PresentationLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */; };
+		AF037EC72CCD09D400EE0F1F /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EC62CCD09D400EE0F1F /* DataLayer */; };
+		AF037EC92CCD09D400EE0F1F /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EC82CCD09D400EE0F1F /* DomainLayer */; };
+		AF037ECB2CCD09D400EE0F1F /* PresentationLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037ECA2CCD09D400EE0F1F /* PresentationLayer */; };
 		AF7753562CCCEB50001E8BF5 /* ArchitectureKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */; };
 		AF7753582CCCEB50001E8BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753572CCCEB50001E8BF5 /* ContentView.swift */; };
 		AF77535A2CCCEB53001E8BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7753592CCCEB53001E8BF5 /* Assets.xcassets */; };
@@ -55,9 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF037EBA2CCCF7DD00EE0F1F /* DomainLayer in Frameworks */,
-				AF037EBC2CCCF7DD00EE0F1F /* PresentationLayer in Frameworks */,
-				AF037EB82CCCF7DD00EE0F1F /* DataLayer in Frameworks */,
+				AF037EC92CCD09D400EE0F1F /* DomainLayer in Frameworks */,
+				AF037ECB2CCD09D400EE0F1F /* PresentationLayer in Frameworks */,
+				AF037EC72CCD09D400EE0F1F /* DataLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,9 +168,9 @@
 			);
 			name = ArchitectureKit;
 			packageProductDependencies = (
-				AF037EB72CCCF7DD00EE0F1F /* DataLayer */,
-				AF037EB92CCCF7DD00EE0F1F /* DomainLayer */,
-				AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */,
+				AF037EC62CCD09D400EE0F1F /* DataLayer */,
+				AF037EC82CCD09D400EE0F1F /* DomainLayer */,
+				AF037ECA2CCD09D400EE0F1F /* PresentationLayer */,
 			);
 			productName = ArchitectureKit;
 			productReference = AF7753522CCCEB50001E8BF5 /* ArchitectureKit.app */;
@@ -244,6 +244,8 @@
 				Base,
 			);
 			mainGroup = AF7753492CCCEB50001E8BF5;
+			packageReferences = (
+			);
 			productRefGroup = AF7753532CCCEB50001E8BF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -433,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -621,15 +623,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AF037EB72CCCF7DD00EE0F1F /* DataLayer */ = {
+		AF037EC62CCD09D400EE0F1F /* DataLayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DataLayer;
 		};
-		AF037EB92CCCF7DD00EE0F1F /* DomainLayer */ = {
+		AF037EC82CCD09D400EE0F1F /* DomainLayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DomainLayer;
 		};
-		AF037EBB2CCCF7DD00EE0F1F /* PresentationLayer */ = {
+		AF037ECA2CCD09D400EE0F1F /* PresentationLayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationLayer;
 		};
