@@ -1,5 +1,5 @@
 //
-//  DomainLayer.swift
+//  CharactersRepository.swift
 //  
 //
 //  Created by Jordi Duran Ortega on 26/10/24.
@@ -8,3 +8,6 @@
 
 import Foundation
 
+public protocol CharactersRepository {
+    func getCharacters() async throws -> [CharacterEntity]
+}
