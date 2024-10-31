@@ -10,6 +10,8 @@
 		AF037EC72CCD09D400EE0F1F /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EC62CCD09D400EE0F1F /* DataLayer */; };
 		AF037EC92CCD09D400EE0F1F /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037EC82CCD09D400EE0F1F /* DomainLayer */; };
 		AF037ECB2CCD09D400EE0F1F /* PresentationLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AF037ECA2CCD09D400EE0F1F /* PresentationLayer */; };
+		AF037ED32CCE6E2700EE0F1F /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF037ED22CCE6E2700EE0F1F /* AppContainer.swift */; };
+		AF037ED52CCEA66A00EE0F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF037ED42CCEA66A00EE0F1F /* AppDelegate.swift */; };
 		AF7753562CCCEB50001E8BF5 /* ArchitectureKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */; };
 		AF7753582CCCEB50001E8BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753572CCCEB50001E8BF5 /* ContentView.swift */; };
 		AF77535A2CCCEB53001E8BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7753592CCCEB53001E8BF5 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		AF037EB52CCCF66700EE0F1F /* Layers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Layers; sourceTree = "<group>"; };
+		AF037ED22CCE6E2700EE0F1F /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		AF037ED42CCEA66A00EE0F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7753522CCCEB50001E8BF5 /* ArchitectureKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureKitApp.swift; sourceTree = "<group>"; };
 		AF7753572CCCEB50001E8BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF037ECF2CCE6DFC00EE0F1F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AF037ED02CCE6E0400EE0F1F /* Application */,
+				AF037ED42CCEA66A00EE0F1F /* AppDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AF037ED02CCE6E0400EE0F1F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AF037ED12CCE6E1500EE0F1F /* DI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AF037ED12CCE6E1500EE0F1F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				AF037ED22CCE6E2700EE0F1F /* AppContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		AF7753492CCCEB50001E8BF5 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +147,7 @@
 		AF7753542CCCEB50001E8BF5 /* ArchitectureKit */ = {
 			isa = PBXGroup;
 			children = (
+				AF037ECF2CCE6DFC00EE0F1F /* Source */,
 				AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */,
 				AF7753572CCCEB50001E8BF5 /* ContentView.swift */,
 				AF7753592CCCEB53001E8BF5 /* Assets.xcassets */,
@@ -288,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF037ED52CCEA66A00EE0F1F /* AppDelegate.swift in Sources */,
 				AF7753582CCCEB50001E8BF5 /* ContentView.swift in Sources */,
 				AF7753562CCCEB50001E8BF5 /* ArchitectureKitApp.swift in Sources */,
+				AF037ED32CCE6E2700EE0F1F /* AppContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GetCharactersUseCase {
+public protocol GetCharactersUseCase {
     func execute() async throws -> [CharacterEntity]
 }
 
