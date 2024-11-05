@@ -14,6 +14,10 @@
 		AF7753672CCCEB53001E8BF5 /* ArchitectureKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753662CCCEB53001E8BF5 /* ArchitectureKitTests.swift */; };
 		AF7753712CCCEB53001E8BF5 /* ArchitectureKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753702CCCEB53001E8BF5 /* ArchitectureKitUITests.swift */; };
 		AF7753732CCCEB53001E8BF5 /* ArchitectureKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7753722CCCEB53001E8BF5 /* ArchitectureKitUITestsLaunchTests.swift */; };
+		AFAD01612CD3E0E400521D74 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD01602CD3E0E400521D74 /* AppContainer.swift */; };
+		AFAD01642CD3E0F900521D74 /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AFAD01632CD3E0F900521D74 /* DataLayer */; };
+		AFAD01662CD3E0F900521D74 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AFAD01652CD3E0F900521D74 /* DomainLayer */; };
+		AFAD01682CD3E0F900521D74 /* PresentationLayer in Frameworks */ = {isa = PBXBuildFile; productRef = AFAD01672CD3E0F900521D74 /* PresentationLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		AF77536C2CCCEB53001E8BF5 /* ArchitectureKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectureKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7753702CCCEB53001E8BF5 /* ArchitectureKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureKitUITests.swift; sourceTree = "<group>"; };
 		AF7753722CCCEB53001E8BF5 /* ArchitectureKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFA894F52CD3DBE00041173D /* Layers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Layers; path = Modules/Layers; sourceTree = SOURCE_ROOT; };
+		AFAD01602CD3E0E400521D74 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAD01662CD3E0F900521D74 /* DomainLayer in Frameworks */,
+				AFAD01682CD3E0F900521D74 /* PresentationLayer in Frameworks */,
+				AFAD01642CD3E0F900521D74 /* DataLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 				AF7753652CCCEB53001E8BF5 /* ArchitectureKitTests */,
 				AF77536F2CCCEB53001E8BF5 /* ArchitectureKitUITests */,
 				AF7753532CCCEB50001E8BF5 /* Products */,
+				AFAD01622CD3E0F900521D74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +104,8 @@
 		AF7753542CCCEB50001E8BF5 /* ArchitectureKit */ = {
 			isa = PBXGroup;
 			children = (
+				AFAD015D2CD3E0C000521D74 /* Source */,
+				AFA894F32CD3DB6E0041173D /* Modules */,
 				AF7753552CCCEB50001E8BF5 /* ArchitectureKitApp.swift */,
 				AF7753572CCCEB50001E8BF5 /* ContentView.swift */,
 				AF7753592CCCEB53001E8BF5 /* Assets.xcassets */,
@@ -127,6 +139,45 @@
 			path = ArchitectureKitUITests;
 			sourceTree = "<group>";
 		};
+		AFA894F32CD3DB6E0041173D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AFA894F52CD3DBE00041173D /* Layers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AFAD015D2CD3E0C000521D74 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD015E2CD3E0CC00521D74 /* Application */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AFAD015E2CD3E0CC00521D74 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD015F2CD3E0D100521D74 /* DI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AFAD015F2CD3E0D100521D74 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD01602CD3E0E400521D74 /* AppContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		AFAD01622CD3E0F900521D74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +194,11 @@
 			dependencies = (
 			);
 			name = ArchitectureKit;
+			packageProductDependencies = (
+				AFAD01632CD3E0F900521D74 /* DataLayer */,
+				AFAD01652CD3E0F900521D74 /* DomainLayer */,
+				AFAD01672CD3E0F900521D74 /* PresentationLayer */,
+			);
 			productName = ArchitectureKit;
 			productReference = AF7753522CCCEB50001E8BF5 /* ArchitectureKit.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +315,7 @@
 			files = (
 				AF7753582CCCEB50001E8BF5 /* ContentView.swift in Sources */,
 				AF7753562CCCEB50001E8BF5 /* ArchitectureKitApp.swift in Sources */,
+				AFAD01612CD3E0E400521D74 /* AppContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +645,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFAD01632CD3E0F900521D74 /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLayer;
+		};
+		AFAD01652CD3E0F900521D74 /* DomainLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainLayer;
+		};
+		AFAD01672CD3E0F900521D74 /* PresentationLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF77534A2CCCEB50001E8BF5 /* Project object */;
 }
